@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scrollbar-width: none;
+}
+
+:root {
+--main-gray-color: #0a0a0a;
+--primary-gray-color: #131313;
+--dark-gray-color: #101010;
+}
+
+body {
+    background-color: var(--main-gray-color);
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header */
+
+.cinema-name {
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 20px;
+    color: white;
+    font-family: "Playwrite AU TAS", cursive;
+}
+
+.header {
+    position: fixed;
+    height: 8%;
+    width: 100%;
+    z-index: 8;
+    background: var(--primary-gray-color);
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-item .nav-link {
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    border: transparent 1px solid;
+}
+
+.navbar .nav-link:hover {
+    color: rgb(255, 174, 0);
+    border-radius: 15px;
+    background-color: var(--dark-gray-color);
+    border: var(--dark-gray-color) 1px solid;
+}
+
+
+/* Rules */
+
+.rules {
+    position: fixed;
+    justify-content: center;
+    text-align: center;
+    scrollbar-width: none;
+    border-radius: 15px;
+    padding: 0px 50px 40px 50px;
+    width: 1300px;
+    height: 900px;
+    margin-bottom: 10px;
+    top: 80px;
+    z-index: 7;
+    justify-self: center;
+    background-color: rgba(19, 19, 19, 0.95);
+    color: rgb(184, 184, 184);
+    box-shadow: 0 0 30px 25px rgba(0, 0, 0, 0.5);
+    border: none;
+    
+}
+
+.rules-p {
+    margin-bottom: 50px;
+}
+
+.openRules {
+    cursor: pointer;
+}
+
+.closeRules {
+    position: relative;
+    margin-top: 10px;
+    border: none;
+    background-color: #1a1a1a;
+}
+
+.closeRules img {
+    position: relative;
+    width: 30px;
+    margin-right: -1240px;
+}
+
+.rules-h5 {
+    position: relative;
+    text-align: center;
+}
+
+/* Main */
+
+
+/* Poster */
+
+.Movie-poster {
+    position: relative;
+    width: 100%;
+    top: 35px;
+    z-index: 1;
+}
+
+.order-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 3%;
+    position: relative;
+    top: -100px;
+}
+
+#order-button {
+    position: relative;
+    width: 200px;
+    height: 55px;
+    z-index: 5;
+    border-radius: 20px;
+    background-color: rgb(255, 174, 0);
+    border: none;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+#amazon-button {
+    position: relative;
+    width: 200px;
+    height: 55px;
+    z-index: 5;
+    border-radius: 20px;
+    background-color: rgb(255, 174, 0);
+    border: none;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+#amazon-button a{
+    color: black;
+}
+
+
+#order-button:hover{
+    transform: scale(1.04);
+}
+
+#amazon-button:hover {
+    transform: scale(1.04);
+}
+
+/* About movie */
+
+.About-text {
+    position: relative;
+    font-size: 115%;
+    top: -500px;
+    padding-left: 3%;
+    color: white;
+    z-index: 5;
+
+}
+
+.About-text {
+    max-width: 40%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.about-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    top: -510px;
+    margin: 0;
+    padding: 0;
+    padding-left: 3%;
+    position: relative;
+}
+
+.age-limit {
+    position: relative;
+    background-color: rgb(165, 56, 56);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 13.5%;
+    top: 10px;
+    height: 25px;
+    width: 35px;
+    z-index: 5;
+    color: white;
+    text-align: center;
+}
+
+.Movie-h {
+    position: relative;
+    font-size: 223%;
+    margin-left: 3%;
+    color: white;
+    width: 100%;
+    z-index: 5;
+    font-family: "Playwrite AU TAS", cursive;
+}
+
+.contact-item {
+    margin-bottom: 7px;
+}
+
+/* items dec's */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Carousel */
+
+.carousel-f-mvs {
+    position: relative;
+    top: -250px;
+    width: 400px;
+    margin: 50px auto;
+}
+
+.carousel-f-mvs h4 {
+    text-align: center;
+    position: relative;
+    top: -10px;
+    color: rgb(184, 184, 184);
+}
+
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 250px; 
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto;
+    
+}
+
+
+/* About cinema */
+
+.text-about-cin {
+    color: rgb(184, 184, 184);
+    position: relative;
+    top: -240px;
+    margin: 50px 50px auto;
+}
+
+.picture-of-cinema {
+    position: relative;
+    top: -180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-of-cinema p {
+    color: rgb(184, 184, 184);
+    position: absolute;
+    top: 550px;
+}
+
+.picture-of-cinema img {
+    position: static;
+    width: 900px;
+    max-width: 100%;
+}
+
+
+/* Coming soon */
+
+.coming-soon h4 {
+    position: relative;
+    margin-top: 320px;
+    text-align: center;
+    color: rgb(184, 184, 184);
+}
+
+.coming-soon-ul {
+    position: relative;
+    justify-content: center;
+    margin-top: 150px;
+    display: flex;
+    gap: 35px;
+}
+
+.coms-poster {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 300px;
+}
+
+.cs-poster p {
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(184, 184, 184);
+}
+
+.cs-poster img {
+    transition: 0.2s ease;
+}
+
+.cs-poster img:hover {
+    transform: scale(1.1);
+}
+
+
+/* ShowTimes */
+
+.st h5{
+    position: relative;
+    text-align: center;
+    margin-top: 155px;
+    color: rgb(184, 184, 184);
+    
+}
+
+/* Contact Us */
+
+footer {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    background-color: var(--primary-gray-color);
+    border: 0.5px rgb(39, 39, 39) solid;
+    top: 300px;
+}
+
+
+footer .contact-us {
+    text-align: center;
+    height: 100%;
+}
+
+.contacts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 5px;
+    height: 100%;
+    margin-bottom: 100px;
+}
