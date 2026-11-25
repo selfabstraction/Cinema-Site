@@ -790,22 +790,31 @@ footer .contact-us {
     }
 
     .picture-of-cinema {
-        position: relative;
-        top: -180px;
-        width: 300px;
+        position: static;
+        width: 100%;
+        max-width: 390px;
+        margin: 24px auto;
+        padding: 0 16px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-    }
-
-    .picture-text {
-        width: 300px;
+        gap: 10px;
     }
 
     .picture-of-cinema img {
         position: static;
-        width: 300px;
-        max-width: 100%;
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+    }
+
+    .picture-of-cinema p {
+        position: static;
+        width: 100%;
+        font-size: 11px;
+        text-align: center;
+        color: rgb(184, 184, 184);
     }
 
     .About-text {
@@ -868,12 +877,6 @@ footer .contact-us {
     .picture-of-cinema {
         top: -40px;
         justify-self: center;
-    }
-
-    .picture-of-cinema p {
-        top: 200px;
-        font-size: 10px;
-        text-align: center;
     }
     
     #coming-soon {
@@ -1017,7 +1020,7 @@ footer .contact-us {
     }
 
     .Movie-poster {
-        top: 60px;
+        top: 55px;
     }
 
     #amazon-button {
