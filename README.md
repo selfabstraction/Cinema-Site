@@ -1,2 +1,3 @@
-# Cinema-Site-for-Portfolio
-cinema site for portfolio HTML, CSS, JS 
+# Cinema-Site
+that a so simple cinema site for my portfolio 
+Lang: HTML, CSS, JS 
