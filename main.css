@@ -473,23 +473,26 @@ a {
 
 .st {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     top: 200px;
 }
 
-.st h5{
+.st h5 {
     position: relative;
     text-align: center;
     margin-top: 100px;
     color: rgb(184, 184, 184);
-    
 }
 
 .st img {
     display: block;
-    justify-self: center;
-    top: 10px;
-    margin-top: 60px;
+    margin: 60px auto 0;
     width: 500px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -677,12 +680,6 @@ footer .contact-us {
         left: -12px;
         top: -230px;
         gap: 5px;
-    }
-
-    .Showtimes {
-        top: -200px;
-        justify-content: center;
-        align-items: center;
     }
 
     .st-text {
@@ -905,12 +902,6 @@ footer .contact-us {
         gap: 5px;
     }
 
-    .Showtimes {
-        top: -200px;
-        justify-content: center;
-        align-items: center;
-    }
-
     .st-text {
         font-size: 15px;
         top: -350px;
@@ -1094,10 +1085,6 @@ footer .contact-us {
         gap: 5px;
     }
 
-    .Showtimes {
-        top: -200px;
-    }
-
     .st {
         position: relative;
         top: -80px;
@@ -1267,10 +1254,6 @@ footer .contact-us {
         left: -12px;
         top: -190px;
         gap: 5px;
-    }
-
-    .Showtimes {
-        top: -200px;
     }
 
     .st {
