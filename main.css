@@ -1,0 +1,1596 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scrollbar-width: none;
+}
+
+body {
+    overflow-x: clip;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--main-gray-color);
+    scroll-behavior: smooth;
+}
+
+:root {
+--main-gray-color: #0a0a0a;
+--primary-gray-color: #131313;
+--dark-gray-color: #101010;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+/* Header */
+
+.cinema-name {
+    margin: 0;
+    color: white;
+    font-family: "Playwrite AU TAS", cursive;
+}
+
+.header {
+    position: fixed;
+    height: 9%;
+    width: 100%;
+    z-index: 8;
+    background: var(--primary-gray-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.header a {
+
+    width: 100px;
+    height: auto;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    position: static;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 800px;
+    gap: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.navbar .nav-item .nav-link {
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.navbar .nav-link:hover {
+    color: rgb(255, 174, 0);
+    background-color: var(--dark-gray-color);
+    border: var(--dark-gray-color) 1px solid;
+}
+
+
+/* Mobile Nav */
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-gray-color);
+    border-top: 1px solid rgb(39, 39, 39);
+    border-bottom: 1px solid rgb(39, 39, 39);
+    padding: 20px;
+    z-index: 8;
+}
+
+.mobile-nav.is-open {
+    display: block;
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-nav-link {
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    padding: 6px 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.mobile-nav-link:hover {
+    color: rgb(255, 174, 0);
+}
+
+.menu-icon {
+        display: none;
+        cursor: pointer;
+}  
+
+.close-mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-left: auto;
+    margin-bottom: 0;
+    padding: 6px;
+    background-color: transparent;
+    border: none;
+}
+
+.mobile-nav-list {
+    margin-top: -20px;
+    gap: 14px;
+}
+
+.close-mobile-nav img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+
+/* Rules */
+
+.rules {
+    position: fixed;
+    justify-content: center;
+    text-align: center;
+    scrollbar-width: none;
+    border-radius: 15px;
+    padding: 0px 50px 40px 50px;
+    width: 1300px;
+    height: 900px;
+    margin-bottom: 10px;
+    top: 80px;
+    z-index: 7;
+    justify-self: center;
+    background-color: rgba(19, 19, 19, 0.95);
+    color: rgb(184, 184, 184);
+    box-shadow: 0 0 30px 25px rgba(0, 0, 0, 0.5);
+    border: none;
+    
+}
+
+.rules-p {
+    margin-bottom: 50px;
+}
+
+.openRules {
+    cursor: pointer;
+}
+
+.closeRules {
+    position: relative;
+    margin-top: 10px;
+    border: none;
+    background-color: #1a1a1a;
+}
+
+.closeRules img {
+    position: relative;
+    width: 30px;
+    margin-right: -1240px;
+}
+
+.rules-h5 {
+    position: relative;
+    text-align: center;
+}
+
+/* Main */
+
+main {
+    width: 100%;
+}
+
+/* Poster */
+
+.Movie-poster {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100vw;
+    padding-bottom: 0px;
+    top: 35px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+img.Movie-poster {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    top: 0;
+}
+
+.order-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    padding-left: 3%;
+    position: relative;
+    top: -100px;
+}
+
+#order-button {
+    position: relative;
+    width: 200px;
+    height: 55px;
+    z-index: 5;
+    border-radius: 20px;
+    background-color: rgb(255, 174, 0);
+    border: none;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+#amazon-button {
+    position: relative;
+    width: 200px;
+    height: 55px;
+    z-index: 5;
+    border-radius: 20px;
+    background-color: rgb(255, 174, 0);
+    border: none;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+#amazon-button a{
+    color: black;
+}
+
+
+#order-button:hover{
+    transform: scale(1.04);
+}
+
+#amazon-button:hover {
+    transform: scale(1.04);
+}
+
+/* About movie */
+
+.About-text {
+    position: relative;
+    font-size: 115%;
+    top: -500px;
+    padding-left: 3%;
+    color: white;
+    z-index: 5;
+
+}
+
+.About-text {
+    max-width: 40%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.about-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    top: -510px;
+    margin: 0;
+    padding: 0;
+    padding-left: 3%;
+    position: relative;
+}
+
+.age-limit {
+    position: relative;
+    background-color: rgb(165, 56, 56);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 13.5%;
+    top: 10px;
+    height: 25px;
+    width: 35px;
+    z-index: 5;
+    color: white;
+    text-align: center;
+}
+
+.Movie-h {
+    position: relative;
+    font-size: 223%;
+    margin-left: 3%;
+    color: white;
+    width: 100%;
+    z-index: 5;
+    font-family: "Playwrite AU TAS", cursive;
+}
+
+.contact-item {
+    margin-bottom: 7px;
+}
+
+/* items dec's */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* About cinema */
+
+.text-about-cin {
+    color: rgb(184, 184, 184);
+    position: relative;
+    top: -290px;
+    margin: 50px 50px auto;
+}
+
+.picture-of-cinema {
+    position: relative;
+    top: -190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-of-cinema p {
+    color: rgb(184, 184, 184);
+    position: absolute;
+    top: 550px;
+}
+
+.picture-of-cinema img {
+    position: static;
+    width: 900px;
+    max-width: 100%;
+}
+
+
+/* Carousel */
+
+.carousel-f-mvs {
+    position: relative;
+    top: 20px;
+    padding-bottom: 100px;
+    width: 550px;
+    margin: 50px auto;
+}
+
+.carousel-f-mvs h4 {
+    text-align: center;
+    position: relative;
+    top: -30px;
+    color: rgb(184, 184, 184);
+}
+
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 250px; 
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto;
+    
+}
+
+
+/* Coming soon */
+
+.coming-soon {
+    position: relative;
+    top: 90px;
+}
+
+.coming-soon h4 {
+    position: relative;
+    justify-self: center;
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(184, 184, 184);
+}
+
+.coming-soon-ul {
+    position: relative;
+    justify-content: center;
+    margin-top: 60px;
+    display: flex;
+    gap: 35px;
+}
+
+.coms-poster {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 300px;
+}
+
+.cs-poster p {
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(184, 184, 184);
+}
+
+.cs-poster img {
+    transition: 0.2s ease;
+}
+
+.cs-poster img:hover {
+    transform: scale(1.1);
+}
+
+
+/* ShowTimes */
+
+.st {
+    position: relative;
+    top: 200px;
+}
+
+.st h5{
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(184, 184, 184);
+    
+}
+
+.st img {
+    display: block;
+    justify-self: center;
+    top: 10px;
+    margin-top: 60px;
+    width: 500px;
+    height: auto;
+}
+
+
+/* Contact Us */
+
+footer {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    background-color: var(--primary-gray-color);
+    border: 0.5px rgb(39, 39, 39) solid;
+    top: 400px;
+}
+
+footer .contact-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+
+.contact-item {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* Adaptation for different resolutions */
+
+@media (min-width: 200px) and (max-width: 360px) {
+    .rules{
+        justify-content: center;
+        width: 90%;
+    }
+    
+    .carousel-f-mvs {
+        position: relative;
+        justify-content: center;
+        top: -40px;
+        padding-bottom: 100px;
+        width: 300px;
+        margin: 50px auto;
+    }
+
+    .carousel-f-mvs img {
+        width: 150px; 
+        height: 250px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .carousel-f-mvs h4 {
+        text-align: center;
+        position: relative;
+        font-size: 15px;
+        top: -20px;
+        color: rgb(184, 184, 184);
+    }
+
+    .picture-of-cinema {
+        position: relative;
+        top: -180px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .picture-text {
+        width: 300px;
+    }
+
+    .picture-of-cinema img {
+        position: static;
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .About-text {
+        max-width: 800%;
+        top: -185px;
+        font-size: 9.5px;
+        text-align: center;
+    }
+
+    .about-ul {
+        top: -180px;
+        justify-content: center;
+    }
+
+    .Movie-h {
+        font-size: 20px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .age-limit {
+        height: 14px;
+        width: 17px;
+        font-size: 10px;
+        left: -25px;
+        top: 5px;
+    }
+
+    .Movie-poster {
+        top: 45px;
+    }
+
+    #amazon-button {
+        width: 120px;
+        height: 40px;
+        font-size: 8px;
+    }
+
+    #order-button {
+        width: 120px;
+        height: 40px;
+        font-size: 8px;
+    }
+
+    .order-buttons {
+        position: relative;
+        justify-content: center;
+        top: 30px;
+    }
+
+    .text-about-cin {  
+        font-size: 10px;
+        top: -90px;
+    }
+
+    .text-about-cin h4 {
+        font-size: 15px;
+    }
+
+    .picture-of-cinema {
+        top: -25px;
+        justify-self: center;
+    }
+
+    .picture-of-cinema p {
+        top: 200px;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    #coming-soon {
+        text-align: center;
+        top: -170px;
+    }
+
+    .closeRules img {
+        position: relative;
+        margin-right: -280px;
+    }
+
+    .closeRules {
+        margin-top: 15px;
+    }
+
+    .coms-poster {
+        height: 230px;
+        width: 160px;
+    }
+
+    .coming-soon-ul {
+        display: grid;
+        left: -12px;
+        top: -230px;
+        gap: 5px;
+    }
+
+    .Showtimes {
+        top: -200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .st-text {
+        font-size: 15px;
+        top: -350px;
+        text-align: center;
+    }
+
+    footer {
+        top: 0px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+    }
+
+    .header {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+    }
+
+    .cinema-name {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 1;
+        top: 35%;
+        margin: 0;
+        text-align: center;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .menu-icon {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu-icon img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .st {
+        position: relative;
+        top: -100px;
+    }
+
+    .st img {
+        width: 300px;
+    }
+    
+    .st h5 {
+        position: relative;
+        top: 0px;
+    }
+
+    .contact-us {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 400px) {
+    .rules{
+        justify-content: center;
+        width: 90%;
+    }
+    
+    .carousel-f-mvs {
+        position: relative;
+        justify-content: center;
+        top: 35px;
+        padding-bottom: 100px;
+        width: 300px;
+        margin: 50px auto;
+    }
+
+    .carousel-f-mvs img {
+        width: 150px; 
+        height: 250px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .carousel-f-mvs h4 {
+        text-align: center;
+        position: relative;
+        font-size: 15px;
+        top: -20px;
+        color: rgb(184, 184, 184);
+    }
+
+    .picture-of-cinema {
+        position: relative;
+        top: -180px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .picture-text {
+        width: 300px;
+    }
+
+    .picture-of-cinema img {
+        position: static;
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .About-text {
+        max-width: 800%;
+        top: -205px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .about-ul {
+        top: -200px;
+        justify-content: center;
+    }
+
+    .Movie-h {
+        font-size: 20px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .age-limit {
+        height: 14px;
+        width: 17px;
+        font-size: 10px;
+        left: -25px;
+        top: 13px;
+    }
+
+    .Movie-poster {
+        top: 45px;
+    }
+
+    #amazon-button {
+        width: 120px;
+        height: 40px;
+        font-size: 8px;
+    }
+
+    #order-button {
+        width: 120px;
+        height: 40px;
+        font-size: 8px;
+    }
+
+    .order-buttons {
+        position: relative;
+        justify-content: center;
+        top: 20px;
+    }
+
+    .text-about-cin {  
+        font-size: 10px;
+        top: -90px;
+    }
+
+    .text-about-cin h4 {
+        font-size: 15px;
+    }
+
+    .picture-of-cinema {
+        top: -40px;
+        justify-self: center;
+    }
+
+    .picture-of-cinema p {
+        top: 200px;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    #coming-soon {
+        text-align: center;
+        top: -190px;
+    }
+
+    .closeRules img {
+        position: relative;
+        margin-right: -280px;
+    }
+
+    .closeRules {
+        margin-top: 15px;
+    }
+
+    .coms-poster {
+        height: 230px;
+        width: 160px;
+    }
+
+    .coming-soon-ul {
+        display: grid;
+        left: -12px;
+        top: -230px;
+        gap: 5px;
+    }
+
+    .Showtimes {
+        top: -200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .st-text {
+        font-size: 15px;
+        top: -350px;
+        text-align: center;
+    }
+
+    footer {
+        top: 0px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+    }
+
+    .header {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+    }
+
+    .cinema-name {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 1;
+        top: 35%;
+        margin: 0;
+        text-align: center;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .menu-icon {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu-icon img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .st {
+        position: relative;
+        top: -120px;
+    }
+
+    .st img {
+        width: 300px;
+    }
+    
+    .st h5 {
+        position: relative;
+        top: 30px;
+    }
+
+    .contact-us {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .rules{
+    justify-content: center;
+    width: 450px;
+    }
+    
+    .carousel-f-mvs {
+        width: 90%;
+        top: 60px;
+    }
+
+    .About-text {
+        font-size: 10px;
+        max-width: 800%;
+        top: -230px;
+        text-align: center;
+    }
+
+    .about-ul {
+        top: -225px;
+        justify-content: center;
+    }
+
+    .Movie-h {
+        font-size: 15px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .age-limit {
+        height: 10px;
+        width: 15px;
+        font-size: 7px;
+        left: -25px;
+        top: 6px;
+    }
+
+    .Movie-poster {
+        top: 27px;
+    }
+
+    #amazon-button {
+        width: 100px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    #order-button {
+        width: 100px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .order-buttons {
+        position: relative;
+        justify-content: center;
+        top: -20px;
+    }
+
+    .text-about-cin {  
+        font-size: 13px;
+        top: -130px;
+    }
+
+    .text-about-cin h4 {
+        font-size: 18px;
+    }
+
+    .picture-of-cinema {
+        top: -75px;
+        justify-self: center;
+        width: 400px
+    }
+
+    .picture-of-cinema p {
+        top: 255px;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    #coming-soon {
+        text-align: center;
+        top: -170px;
+    }
+
+    .closeRules img {
+        position: relative;
+        margin-right: -400px;
+    }
+
+    .closeRules {
+        margin-top: 15px;
+    }
+
+    .coms-poster {
+        height: 230px;
+        width: 160px;
+    }
+
+    .coming-soon-ul {
+        display: grid;
+        left: -12px;
+        top: -190px;
+        gap: 5px;
+    }
+
+    .Showtimes {
+        top: -200px;
+    }
+
+    .st {
+        position: relative;
+        top: -80px;
+    }
+
+    .st img {
+        width: 400px;
+    }
+
+    .st-text {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    footer {
+        top: 100px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .cinema-name {
+        position: relative;
+        text-align: center;
+        justify-self: center;
+        font-size: 15px;
+        top: 0px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: 10px;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu-icon img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #contacts {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 407px) {
+    .About-text {
+        text-align: center;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 864px) {
+    .rules{
+    justify-content: center;
+    width: 450px;
+    }
+    
+    .carousel-f-mvs {
+        width: 90%;
+        top: 60px;
+    }
+
+    .About-text {
+        font-size: 11px;
+        max-width: 800%;
+        top: -260px;
+        text-align: center;
+    }
+
+    .about-ul {
+        top: -260px;
+        justify-content: center;
+    }
+
+    .Movie-h {
+        font-size: 15px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .age-limit {
+        height: 10px;
+        width: 15px;
+        font-size: 7px;
+        left: -25px;
+        top: 6px;
+    }
+
+    .Movie-poster {
+        top: 27px;
+    }
+
+    #amazon-button {
+        width: 100px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    #order-button {
+        width: 100px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .order-buttons {
+        position: relative;
+        justify-content: center;
+        top: -60px;
+    }
+
+    .text-about-cin {  
+        font-size: 13px;
+        top: -130px;
+    }
+
+    .text-about-cin h4 {
+        font-size: 18px;
+    }
+
+    .picture-of-cinema {
+        top: -75px;
+        justify-self: center;
+        width: 400px
+    }
+
+    .picture-of-cinema p {
+        top: 255px;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    #coming-soon {
+        text-align: center;
+        top: -170px;
+    }
+
+    .closeRules img {
+        position: relative;
+        margin-right: -400px;
+    }
+
+    .closeRules {
+        margin-top: 15px;
+    }
+
+    .coms-poster {
+        height: 230px;
+        width: 160px;
+    }
+
+    .coming-soon-ul {
+        display: grid;
+        left: -12px;
+        top: -190px;
+        gap: 5px;
+    }
+
+    .Showtimes {
+        top: -200px;
+    }
+
+    .st {
+        position: relative;
+        top: -80px;
+    }
+
+    .st img {
+        width: 400px;
+    }
+
+    .st-text {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    footer {
+        top: 100px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .cinema-name {
+        position: relative;
+        text-align: center;
+        justify-self: center;
+        font-size: 15px;
+        top: 0px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: 10px;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu-icon img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #contacts {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 865px) and (max-width: 979px) {
+    header {
+        height: 15%;
+    }
+
+    .cinema-name {
+        font-size: 19px;
+    }
+    
+    .navbar {   
+        font-size: 15px;
+    }
+    
+    .navbar .nav-item .nav-link {
+        margin-top: -10px;
+    }
+
+    .About-text {
+        font-size: 12px;
+        max-width: 90%;
+        top: -310px;
+    }
+
+    .about-ul {
+        top: -310px;
+        font-size: 12px;
+    }
+
+    .age-limit {
+        height: 15px;
+        width: 25px;
+        font-size: 12px;
+        left: -20px;
+        top: 7px;
+    }
+
+    .button-f-order {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    #order-button {
+        width: 130px;
+        height: 55px;
+    }
+
+    #amazon-button {
+        width: 130px;
+        height: 55px;
+    }
+
+    .coming-soon-ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        gap: 25px;
+    }
+
+    .coms-poster {
+        width: 150px;
+        height: 230px;
+        margin: 0;
+    }
+
+    .text-about-cin {
+        top: -200px;
+    }
+    
+    .picture-of-cinema {
+        top: -130px;
+    }
+
+    .picture-of-cinema p {
+        text-align: center;
+        top: 500px;
+        width: 90%;
+    }
+
+    .picture-of-cinema img {
+        width: 90%;
+    }
+}
+
+
+@media (min-width: 980px) and (max-width: 1023px) {
+    header {
+        height: 15%;
+    }
+
+    .cinema-name {
+        font-size: 19px;
+    }
+    
+    .navbar {   
+        font-size: 15px;
+    }
+    
+    .navbar .nav-item .nav-link {
+        margin-top: -10px;
+    }
+
+    .About-text {
+        font-size: 12px;
+        max-width: 90%;
+        top: -310px;
+    }
+
+    .about-ul {
+        top: -310px;
+        font-size: 12px;
+    }
+
+    .age-limit {
+        height: 15px;
+        width: 25px;
+        font-size: 12px;
+        left: -20px;
+        top: 7px;
+    }
+
+    .button-f-order {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    #order-button {
+        width: 130px;
+        height: 55px;
+    }
+
+    #amazon-button {
+        width: 130px;
+        height: 55px;
+    }
+
+    .coming-soon-ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        gap: 20px;
+    }
+
+    .coms-poster {
+        width: 150px;
+        height: 230px;
+        margin: 0;
+    }
+
+    .text-about-cin {
+        top: -200px;
+    }
+    
+    .picture-of-cinema {
+        top: -130px;
+    }
+
+    .picture-of-cinema p {
+        text-align: center;
+        top: 550px;
+        width: 90%;
+    }
+
+    .picture-of-cinema img {
+        width: 90%;
+    }
+
+    .st {
+        top: 100px;
+    }
+
+    .st-text {
+        top: -10px;
+    }
+
+    footer {
+        top: 250px;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1431px) {
+    header {
+        height: 15%;
+    }
+
+    .cinema-name {
+        font-size: 19px;
+    }
+    
+    .navbar {   
+        font-size: 15px;
+    }
+    
+    .navbar .nav-item .nav-link {
+        margin-top: -10px;
+    }
+
+    .About-text {
+        font-size: 12px;
+        max-width: 90%;
+        top: -300px;
+    }
+
+    .about-ul {
+        top: -310px;
+        font-size: 12px;
+    }
+
+    .age-limit {
+        height: 15px;
+        width: 25px;
+        font-size: 12px;
+        left: -20px;
+        top: 7px;
+    }
+
+    .button-f-order {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    #order-button {
+        width: 130px;
+        height: 55px;
+    }
+
+    #amazon-button {
+        width: 130px;
+        height: 55px;
+    }
+
+    .coming-soon-ul {
+        gap: 20px;
+    }
+    
+    .coms-poster {
+        width: 150px;
+        height: 230px;
+    }
+
+    .picture-of-cinema {
+        top: -90px;
+    }
+
+    .text-about-cin {
+        top: -160px;
+    }
+}
